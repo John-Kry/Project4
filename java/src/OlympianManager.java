@@ -24,8 +24,7 @@ public class OlympianManager
                 argLine = argInput.readLine();
                 if (argLine.equals("LGOO")) {
                     int i = 0;
-                    while (argLine != null){
-                        argLine = argInput.readLine();
+                    while ((argLine = argInput.readLine()) != null){
                         String comma = "[,]";
                         String[] attributes = argLine.split(comma);
                         Sex sex;

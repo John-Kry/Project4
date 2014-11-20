@@ -31,6 +31,14 @@ public class Project4 {
                 {
                     p.displayhelp();
                 }
+                else if (line.equals("c")|| line.equals("competitions"))
+                {
+                    p.displayCompetitions();
+                }
+                else if (line.equals("ec")|| line.equals("endcompetition"))
+                {
+                    p.endCompetition();
+                }
                 else if (line.equals("q") || line.equals("quit"))
                 {
                     break;
@@ -77,6 +85,37 @@ public class Project4 {
         for (int i = 0; i < (t.length);i++){
             System.out.println(t[i].olympian1.getOlympianName()+ " And " + t[i].olympian2.getOlympianName());
         }
+    }
+    public void displayCompetitions(){
+        CompetitionManager cm = new CompetitionManager();
+        for (int i =0; i<cm.GetCompetitions().length;i++){
+            ICompetition game = cm.GetCompetitions()[i];
+            System.out.println(game.getHome().olympian1.getOlympianName() +"and"+ game.getHome().olympian2 +"are playing" + game.getEvent()+"versus"+ game.getAway().olympian1.getOlympianName()+ "and" + game.getAway().olympian2.getOlympianName());
+        }
+    }
+    public void startCompetition(){
+        CompetitionManager cm = new CompetitionManager();
+        BufferedReader input = null;
+        try{
+            input = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("What event are you starting?");
+            Event event = input.readLine();
+            System.out.println("What is the home team?");
+            Team homeTeam = input.readLine();
+            System.out.println("What is the away team?");
+            Team awayTeam = input.readLine();
+            cm.StartCompetition(event, homeTeam,awayTeam);
+
+        }catch(IOException ioe){}
+    }
+    public void endCompetition(){
+        BufferedReader input = null;
+        try{
+            input = new BufferedReader(new InputStreamReader(System.in));
+            String line;
+            line = input.readLine();
+
+        }catch(IOException ioe){}
     }
     public void displayhelp(){
         //displays help information
