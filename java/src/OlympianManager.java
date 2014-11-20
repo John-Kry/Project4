@@ -25,18 +25,17 @@ public class OlympianManager
                 if (argLine.equals("LGOO")) {
                     int i = 0;
                     while (argLine != null){
-                                argLine = argInput.readLine();
-                                String comma = "[,]";
-                                String[] attributes = argLine.split(comma);
-                                Sex sex;
-                                if (attributes[2].equals("M")) {
-                                    sex = OlympianManager.Sex.MALE;
-                                }
-                                else {
-                                    sex = OlympianManager.Sex.FEMALE;
-                                }
-
-                                this.Olympians[i] = new Olympian(attributes[0], Integer.parseInt(attributes[1]), sex);
+                        argLine = argInput.readLine();
+                        String comma = "[,]";
+                        String[] attributes = argLine.split(comma);
+                        Sex sex;
+                        if (attributes[2].equals("M")) {
+                            sex = OlympianManager.Sex.MALE;
+                        }
+                        else {
+                            sex = OlympianManager.Sex.FEMALE;
+                        }
+                        this.Olympians[i] = new Olympian(attributes[0], Integer.parseInt(attributes[1]), sex);
                         i= i+1;
                     }
                 }
