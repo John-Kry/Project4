@@ -29,6 +29,7 @@ public class OlympianManager
                         System.out.println(argLine);
                         String comma = "[,]";
                         String[] attributes = argLine.split(comma);
+                        System.out.println(attributes[2]);
                         Sex sex;
                         if (attributes[2].equals("M")) {
                             sex = OlympianManager.Sex.MALE;
