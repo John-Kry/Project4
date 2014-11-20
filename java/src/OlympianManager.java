@@ -26,6 +26,7 @@ public class OlympianManager
                     int i = 0;
                     while (argLine != null){
                         argLine = argInput.readLine();
+                        System.out.println(argLine);
                         String comma = "[,]";
                         String[] attributes = argLine.split(comma);
                         Sex sex;
