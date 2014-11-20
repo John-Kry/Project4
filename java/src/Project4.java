@@ -90,10 +90,10 @@ public class Project4 {
         CompetitionManager cm = new CompetitionManager();
         for (int i =0; i<cm.GetCompetitions().length;i++){
             ICompetition game = cm.GetCompetitions()[i];
-            System.out.println(game.getHome().olympian1.getOlympianName() +"and"+ game.getHome().olympian2 +"are playing" + game.getEvent()+"versus"+ game.getAway().olympian1.getOlympianName()+ "and" + game.getAway().olympian2.getOlympianName());
+            System.out.println(game.getHome().olympian1.getOlympianName() +"and"+ game.getHome().olympian2.getOlympianName() +"are playing" + game.getEvent()+"versus"+ game.getAway().olympian1.getOlympianName()+ "and" + game.getAway().olympian2.getOlympianName());
         }
     }
-    public void startCompetition(){
+    public void startCompetition(){/*
         CompetitionManager cm = new CompetitionManager();
         BufferedReader input = null;
         try{
@@ -106,16 +106,20 @@ public class Project4 {
             Team awayTeam = input.readLine();
             cm.StartCompetition(event, homeTeam,awayTeam);
 
-        }catch(IOException ioe){}
+        }catch(IOException ioe){}*/
     }
     public void endCompetition(){
+      /*  CompetitionManager cm = new CompetitionManager();
         BufferedReader input = null;
         try{
             input = new BufferedReader(new InputStreamReader(System.in));
-            String line;
-            line = input.readLine();
+            System.out.println("Who's competition is over?");
+            Competition competition = input.readLine();
+            System.out.println("Who won?");
+            Team team = input.readLine();
+            cm.EndCompetition(competition, team);
 
-        }catch(IOException ioe){}
+        }catch(IOException ioe){}*/
     }
     public void displayhelp(){
         //displays help information
@@ -125,6 +129,9 @@ public class Project4 {
         System.out.println("Type h or help for the help menu");
         System.out.println("Type t or teams for a list of the teams");
         System.out.println("Type q or quit to exit the program");
+        System.out.println("Type c or competitions to display competitions");
+        System.out.println("Type sc or startcompetitions to start a competition");
+        System.out.println("Type ec or endcompetitions to end a competition");
     }
 }
 

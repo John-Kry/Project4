@@ -9,6 +9,7 @@ public class CompetitionManager {
     private Competition tail;
     private Competition head;
     private Competition currItem = null;
+    //starts competition
     public void StartCompetition(Event event, Team homeTeam, Team awayTeam){
         Competition newCompetition = new Competition(event, homeTeam, awayTeam);
         if (tail ==null){
@@ -20,7 +21,7 @@ public class CompetitionManager {
             tail = newCompetition;
         }
     }
-//ends competition
+    //ends competition
     public void EndCompetition(Competition competition, Team winningTeam){
             Competition currItem = competition;
             Competition prevItem = currItem.prev;
