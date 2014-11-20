@@ -24,7 +24,7 @@ public class OlympianManager
                 argLine = argInput.readLine();
                 if (argLine.equals("LGOO")) {
                     int i = 0;
-                    do {
+                    while (argLine != null){
                                 argLine = argInput.readLine();
                                 String comma = "[,]";
                                 String[] attributes = argLine.split(comma);
@@ -38,7 +38,7 @@ public class OlympianManager
 
                                 this.Olympians[i] = new Olympian(attributes[0], Integer.parseInt(attributes[1]), sex);
                         i= i+1;
-                    } while (argLine != null);
+                    }
                 }
                 else {
                     System.out.println("Invalid file used");
